@@ -37,5 +37,18 @@ class Backpack {
     return daysSinceAcquired;
   }
 }
+const everydayPack = new Backpack(
+  "Everyday Backpack",
+  30,
+  "grey",
+  15,
+  26,
+  26,
+  false,
+  "December 5, 2018 15:00:00 PST"
+);
 
-export default Backpack;
+console.log("Object is: ", everydayPack);
+console.log("Date required: ", everydayPack.dateAcquired);
+console.log("Days of aquired: ", everydayPack.backpackAge());
+// export default Backpack;

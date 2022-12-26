@@ -2,24 +2,27 @@
  * Create a Backpack object.
  */
 
-const backpack = {
-  name: "Everyday Backpack",
-  volume: 30,
-  color: "grey",
-  pocketNum: 15,
-  strapLength: {
-    left: 26,
-    right: 26,
+const mobilePhone = {
+  brand: "Apple",
+  model: "14 Pro",
+  color: "Black",
+  size: {
+    width: 2.81,
+    height: 5.81,
+    depth: 0.31,
   },
-  lidOpen: false,
-  toggleLid: function (lidStatus) {
-    this.lidOpen = lidStatus;
+  descript: function () {
+    console.log(
+      `Hello I'm a Iphon ${this.model} from ${this.brand} have color is ${this.color} and size of me is ${mobilePhone.size}`
+    );
   },
-  newStrapLength: function (lengthLeft, lengthRight) {
-    this.strapLength.left = lengthLeft;
-    this.strapLength.right = lengthRight;
+  changeModel: function (newModel) {
+    this.model = newModel;
   },
 };
 
-console.log("The backpack object:", backpack);
-console.log("The pocketNum value:", backpack.pocketNum);
+mobilePhone.descript();
+
+mobilePhone.changeModel("14Pro Max");
+
+mobilePhone.descript();
